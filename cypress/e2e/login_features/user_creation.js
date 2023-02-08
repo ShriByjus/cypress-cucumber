@@ -56,7 +56,7 @@ And('user will select his passward', ()=>{
 And('user will select his confirm passward', ()=>{
     cy.get('#user_user_detail_attributes_password_confirmation').type('banglore');
 })
-Then('user will click on create button', ()=>{
+And('user will click on create button', ()=>{
     cy.get('[name="submit"]').click();
 })
 Then('user will able to see Qoataion page', ()=>{
