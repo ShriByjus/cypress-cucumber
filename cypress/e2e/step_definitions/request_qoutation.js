@@ -2,8 +2,8 @@ import { Given, When , And , Then } from "cypress-cucumber-preprocessor/steps";
 Given('A user opens the login page', ()=>{
     cy.visit('https://demo.guru99.com/insurance/v1/header.php')
 })
-When('A user enter the user email id {string}', (email_id)=>{
-   cy.get('#email').type(email_id);   
+When('A user enter the user emailId {string}', (emailId)=>{
+   cy.get('#email').type(emailId);   
 })
 And('A user enter the passward {string}', (passward)=>{
     cy.get('#password').type(passward); 
@@ -20,17 +20,17 @@ When(' A user will click on request qoutation tab', ()=>{
 And('A user will select Windscreenrepair', ()=>{
     cy.get('#quotation_windscreenrepair_t').click();
 })
-And('A user will select incidents', ()=>{
-    cy.get('#quotation_incidents').type('5');
+And('A user will select incidents {string}', (incidents)=>{
+    cy.get('#quotation_incidents').type(incidents);
 })
-And('A user will will select RegNo', ()=>{
-    cy.get('#quotation_vehicle_attributes_registration').type('KA-25-U 1234');
+And('A user will will select RegNo {string}', (RegNo)=>{
+    cy.get('#quotation_vehicle_attributes_registration').type(RegNo);
 })
-And('A user will select annula milage', ()=>{
-    cy.get('#quotation_vehicle_attributes_mileage').type('35');
+And('A user will select annula milage {string}', (annulaMilage)=>{
+    cy.get('#quotation_vehicle_attributes_mileage').type(annulaMilage);
 })
-And('A user will select Estimated value', ()=>{
-    cy.get('#quotation_vehicle_attributes_value').type('65000');
+And('A user will select EstimatedValue {string}', (EstimatedValue)=>{
+    cy.get('#quotation_vehicle_attributes_value').type(EstimatedValue);
 })
 And('A user will select parking location', ()=>{
     cy.get('#quotation_vehicle_attributes_parkinglocation').select('Private Property').should('have.value', 'Private property')

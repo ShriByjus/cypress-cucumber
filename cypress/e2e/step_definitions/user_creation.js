@@ -8,14 +8,14 @@ When('user will click on register button', ()=>{
 And('user will select Title', ()=>{
     cy.get('#user_title').select('Mrs').should('have.value', 'Mrs')
 })
-And('user will select his first name', ()=>{
-    cy.get('#user_firstname').type('shrinath')
+And('user will select his firstName {string}', (firstName)=>{
+    cy.get('#user_firstname').type(firstName)
 })
-And('user will selecth his surname', ()=>{
-    cy.get('#user_surname').type('mirashi')
+And('user will selecth his surname {string}', (surname)=>{
+    cy.get('#user_surname').type(surname)
 })
-And('user will select phone number', ()=>{
-    cy.get('#user_phone').type('9898989898')
+And('user will select phonenumber {string}', (phonenumber)=>{
+    cy.get('#user_phone').type(phonenumber)
 })
 And('user will select his DOB year', ()=>{
     cy.get('#user_dateofbirth_1i').select('1992').should('have.value', '1992')
@@ -29,32 +29,32 @@ And('user will select his DOB day', ()=>{
 And('user will select full / provisional', ()=>{
     cy.get('#licencetype_f').click();
 })
-And('user will select licence period', ()=>{
+And('user will select licence period {string}', ()=>{
     cy.get('#user_licenceperiod').select('5').should('have.value', '5')
 })
 And('user will select his occupation', ()=>{
     cy.get('#user_occupation_id').select('Engineer').should('have.value', '12')
 })
-And('user will select his address', ()=>{
-    cy.get('#user_address_attributes_street').type('IBC Park');
+And('user will select his address {string}', (address)=>{
+    cy.get('#user_address_attributes_street').type(address);
 })
-And('user will select his city', ()=>{
-    cy.get('#user_address_attributes_city').type('banglore');
+And('user will select his city {string}', (city)=>{
+    cy.get('#user_address_attributes_city').type(city);
 })
-And('user will select his country', ()=>{
-    cy.get('#user_address_attributes_county').type('banglore');
+And('user will select his country {string}', (country)=>{
+    cy.get('#user_address_attributes_county').type(country);
 })
-And('user will select his postal code', ()=>{
-    cy.get('#user_address_attributes_postcode').type('581329');
+And('user will select his postalCode {string}', (postalCode)=>{
+    cy.get('#user_address_attributes_postcode').type(postalCode);
 })
-And('user will select his email', ()=>{
-    cy.get('#user_user_detail_attributes_email').type('seenumirashi1992@gmail.com');
+And('user will select his email {string}', (email)=>{
+    cy.get('#user_user_detail_attributes_email').type(email);
 })
-And('user will select his passward', ()=>{
-    cy.get('#user_user_detail_attributes_password').type('banglore');
+And('user will select his passward {string}', (passward)=>{
+    cy.get('#user_user_detail_attributes_password').type(passward);
 })
-And('user will select his confirm passward', ()=>{
-    cy.get('#user_user_detail_attributes_password_confirmation').type('banglore');
+And('user will select his confirmPassward {string}', (confirmPassward)=>{
+    cy.get('#user_user_detail_attributes_password_confirmation').type(confirmPassward);
 })
 And('user will click on create button', ()=>{
     cy.get('[name="submit"]').click();

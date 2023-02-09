@@ -2,8 +2,8 @@ import { Given, When , And , Then } from "cypress-cucumber-preprocessor/steps";
 Given('A user opens the login page', ()=>{
     cy.visit('https://demo.guru99.com/insurance/v1/header.php')
 })
-When('A user enter the user email id {string}', (email_id)=>{
-   cy.get('#email').type(email_id);   
+When('A user enter the user emailId {string}', (emailId)=>{
+   cy.get('#email').type(emailId);   
 })
 And('A user enter the passward {string}', (passward)=>{
     cy.get('#password').type(passward); 
@@ -14,8 +14,8 @@ And('A user click on the login button', ()=>{
 When('A user will click on retrive qoutation tab', ()=>{
     cy.get('#ui-id-3').click();
 })
-And(' A user will enter identification number', ()=>{
-    cy.get('input[placeholder="identification number"]').type('21556');
+And('A user will enter identificationNumber {string}', (identificationNumber)=>{
+    cy.get('input[placeholder="identification number"]').type(identificationNumber);
 })
 And('A user will click on retrive button', ()=>{
     cy.get('#getquote').click();
