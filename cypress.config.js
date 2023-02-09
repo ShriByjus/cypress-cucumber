@@ -6,7 +6,6 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     specPattern: "cypress/e2e/features/*.features",
-    baseUrl: "https://demo.guru99.com/insurance/v1/index.php",
-    chromeWebSecurity: true,
+    chromeWebSecurity: false,
   },
 });
