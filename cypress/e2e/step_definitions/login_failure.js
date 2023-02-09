@@ -2,7 +2,7 @@ import {
     Given,
     When,
     Then,
-  } from "@badeball/cypress-cucumber-preprocessor";
+  } from "cypress-cucumber-preprocessor/steps";
 
 Given('A user opens the login page', ()=>{
     cy.visit('https://demo.guru99.com/insurance/v1/index.php')
