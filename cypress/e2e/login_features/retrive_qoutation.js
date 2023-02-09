@@ -1,6 +1,6 @@
 import { Given, When , And , Then } from "cypress-cucumber-preprocessor/steps";
 Given('A user opens the login page', ()=>{
-    cy.url('https://demo.guru99.com/insurance/v1/header.php')
+    cy.visit('https://demo.guru99.com/insurance/v1/header.php')
 })
 When('A user enter the user email id {string}', (email_id)=>{
    cy.get('#email').type(email_id);   

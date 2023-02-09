@@ -1,6 +1,6 @@
 describe('loging test', function(){
     it('Success Loin',()=>{
-        cy.url('https://demo.guru99.com/insurance/v1/header.php')
+        cy.visit('https://demo.guru99.com/insurance/v1/header.php')
         cy.get('#ui-id-2').click();
         cy.get('#quotation_breakdowncover').select('At home').should('have.value', '3')
         cy.get('#quotation_windscreenrepair_t').click();

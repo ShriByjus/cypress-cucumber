@@ -1,6 +1,6 @@
 describe('loging test', function(){
     it('Success Loin',()=>{
-        cy.url('https://demo.guru99.com/insurance/v1/header.php')
+        cy.visit('https://demo.guru99.com/insurance/v1/header.php')
          cy.get('a.btn'),click();
          cy.get('#user_title').select('Mrs').should('have.value', 'Mrs')
          cy.get('#user_firstname').type('shrinath')

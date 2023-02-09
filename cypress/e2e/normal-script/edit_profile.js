@@ -1,6 +1,6 @@
 describe('loging test', function(){
     it('edit profile',()=>{
-        cy.url('https://demo.guru99.com/insurance/v1/header.php')
+        cy.visit('https://demo.guru99.com/insurance/v1/header.php')
         return cy.get('#ui-id-5').click(); 
          cy.get('#user_title').select('Miss').should('have.value', 'Miss')
          cy.get('#user_firstname').type('rahul')
